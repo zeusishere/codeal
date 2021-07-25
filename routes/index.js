@@ -9,6 +9,10 @@ console.log("codeal/index.js has successfully required ./routes/index.js ")
 console.log("codeal/index.js has successfully required ./routes/index.js ") ;
 
 
-/*Actions  */
+/*Actions for corresponding controller */
 router.get('/',homeController.home) ;
+/*       re-routing for other router */
+//re-routing for users router
+router.use('/users',require('./users'));
+
 module.exports = router ;
